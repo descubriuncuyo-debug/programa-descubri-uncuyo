@@ -1,0 +1,17 @@
+CARPETA LISTA PARA GITHUB PAGES
+
+Subí directamente estos elementos al repositorio:
+
+1. index.html
+2. La carpeta assets completa
+3. El archivo .nojekyll
+
+No necesitás instalar Node, Vinext ni ningún programa.
+
+Para verla antes de subirla, abrí index.html con doble clic.
+
+Antes del encuentro todavía hay que completar en index.html:
+- El enlace definitivo de Mentimeter.
+- Las cifras de estudiantes, escuelas, municipios, CENS, becarios y kilómetros.
+- Los testimonios reales.
+- Los enlaces o archivos de videos, reel y aula Moodle.
