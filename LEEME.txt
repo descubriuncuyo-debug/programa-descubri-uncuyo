@@ -10,7 +10,7 @@ No necesitás instalar Node, Vinext ni ningún programa.
 
 Para verla antes de subirla, abrí index.html con doble clic.
 
-La presentación está optimizada para proyección en pantalla 16:9 y se controla con:
+La presentación tiene 15 diapositivas, está optimizada para proyección en pantalla 16:9 y se controla con:
 - Los botones de flecha que aparecen abajo.
 - Las teclas de flecha izquierda y derecha.
 - La barra espaciadora para avanzar.
@@ -20,7 +20,10 @@ La presentación está optimizada para proyección en pantalla 16:9 y se control
 Antes del encuentro todavía conviene completar:
 - El enlace definitivo de Mentimeter.
 - Los testimonios reales de estudiantes y docentes.
-- Los enlaces o archivos de videos, reel y aula Moodle.
+- Los videos, reels o imágenes que ocuparán los espacios multimedia reservados.
+
+Los cuatro dispositivos tienen una diapositiva propia. Los botones internos permiten
+abrir el portal de Ingreso y la plataforma Aulas Abiertas durante la exposición.
 
 IMPORTANTE
 El archivo index.html y la carpeta assets deben quedar en la raíz del repositorio,
