@@ -10,7 +10,7 @@ No necesitás instalar Node, Vinext ni ningún programa.
 
 Para verla antes de subirla, abrí index.html con doble clic.
 
-La presentación tiene 15 diapositivas, está optimizada para proyección en pantalla 16:9 y se controla con:
+La presentación tiene 17 diapositivas, está optimizada para proyección en pantalla 16:9 y se controla con:
 - Los botones de flecha que aparecen abajo.
 - Las teclas de flecha izquierda y derecha.
 - La barra espaciadora para avanzar.
@@ -22,8 +22,10 @@ Antes del encuentro todavía conviene completar:
 - Los testimonios reales de estudiantes y docentes.
 - Los videos, reels o imágenes que ocuparán los espacios multimedia reservados.
 
-Los cuatro dispositivos tienen una diapositiva propia. Los botones internos permiten
-abrir el portal de Ingreso y la plataforma Aulas Abiertas durante la exposición.
+El relato se organiza por poblaciones y momentos: sociedad en general, postulantes
+mayores de 25 años, aspirantes e ingresantes. Dentro de sociedad en general se
+despliegan Punto de Encuentro, intervenciones territoriales y comunicación digital.
+La presentación identifica además a las personas responsables de cada intervención.
 
 IMPORTANTE
 El archivo index.html y la carpeta assets deben quedar en la raíz del repositorio,
