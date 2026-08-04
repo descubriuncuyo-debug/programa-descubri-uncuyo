@@ -4,7 +4,7 @@
   <defs>
     <style>
       .st0 {
-        stroke: #FFC813;
+        stroke: #fec818;
       }
 
       .st0, .st1, .st2, .st3, .st4 {
@@ -14,19 +14,19 @@
       }
 
       .st1 {
-        stroke: #B289FF;
+        stroke: #9889c0;
       }
 
       .st2 {
-        stroke: #00C1CF;
+        stroke: #2fb9c9;
       }
 
       .st3 {
-        stroke: #9CC813;
+        stroke: #9cc422;
       }
 
       .st4 {
-        stroke: #FF77CD;
+        stroke: #e17eb1;
       }
     </style>
   </defs>
