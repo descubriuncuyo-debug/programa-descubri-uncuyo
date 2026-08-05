@@ -172,12 +172,13 @@
     .web-stat{display:inline-flex;flex-direction:column;margin-top:20px;padding:16px 24px;border-radius:19px;background:#fff}.web-stat strong{color:var(--blue);font-size:34px}.web-stat span{font-size:13px;font-weight:850}
     .thanks-slide h2{font-size:clamp(54px,6.5vw,92px)}.thanks-slide img{width:min(1320px,94vw);max-height:330px;margin-top:42px}
     main>section[aria-hidden="true"]{display:none!important;visibility:hidden!important}
+    .fullscreen.icon-fullscreen{width:42px!important;height:42px!important;padding:0!important;border-radius:50%!important;display:inline-flex;align-items:center;justify-content:center;background:var(--blue)!important;color:#fff!important;box-shadow:0 7px 18px rgba(71,90,226,.24)}.fullscreen.icon-fullscreen svg{width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}.fullscreen.icon-fullscreen:hover{transform:scale(1.07)}
   </style>
 </head>
 <body class="first-slide">
   <header class="site-header">
     <a class="brand" href="#inicio"><img src="assets/descubri-puente.svg" alt="Descubrí UNCUYO, tu puente a la Universidad"></a>
-    <button class="fullscreen header-fullscreen" type="button">Pantalla completa</button>
+    <button class="fullscreen header-fullscreen icon-fullscreen" type="button" aria-label="Pantalla completa" title="Pantalla completa"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3H3v5M16 3h5v5M21 16v5h-5M8 21H3v-5"/></svg></button>
     <button class="menu-button" type="button" aria-expanded="false">Menú</button>
     <nav class="nav"><a href="#programa">El programa</a><a href="#dispositivos">Dispositivos</a><a href="#alcance">Alcance</a><a href="#participar">Participar</a></nav>
     <a class="header-action" href="https://www.uncuyo.edu.ar/ingreso/" target="_blank" rel="noopener">Ingreso UNCUYO</a>
@@ -206,7 +207,7 @@
     <button class="prev" type="button" aria-label="Diapositiva anterior">←</button>
     <span class="slide-count" aria-live="polite">1 / 18</span>
     <button class="next" type="button" aria-label="Diapositiva siguiente">→</button>
-    <button class="fullscreen slide-fullscreen" type="button">Pantalla completa</button>
+    <button class="fullscreen slide-fullscreen icon-fullscreen" type="button" aria-label="Pantalla completa" title="Pantalla completa"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3H3v5M16 3h5v5M21 16v5h-5M8 21H3v-5"/></svg></button>
   </div>
   <div class="progress-track" aria-hidden="true"><span class="progress-bar"></span></div>
   <script>
