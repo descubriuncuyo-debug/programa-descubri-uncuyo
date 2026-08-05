@@ -163,7 +163,7 @@
     @media(max-width:1050px){.territory-grid{grid-template-columns:repeat(3,1fr)}.qr-slide{grid-template-columns:1fr 420px}}
     /* Ajustes de ritmo y legibilidad para proyección */
     main>section{animation:softSlideIn .78s cubic-bezier(.22,.61,.36,1)!important}.progress-bar{transition:width .65s ease!important}@keyframes softSlideIn{from{opacity:0;transform:translateX(8px) scale(.998)}to{opacity:1;transform:none}}
-    .logo-cover .discover-logo{width:min(650px,56vw);max-height:260px}.logo-cover .institutional-chain{width:min(1450px,96vw);max-height:330px}.logo-cover .logo-stage{gap:28px}
+    .logo-cover .discover-logo{width:min(510px,42vw);max-height:205px}.logo-cover .institutional-chain{width:min(1580px,98vw);max-height:390px}.logo-cover .logo-stage{gap:24px;width:98vw}
     .reveal-card{transform:translateX(-48px) scale(.985);transition:opacity .9s ease,transform .9s cubic-bezier(.22,.61,.36,1)}
     .society-overview{background:var(--blue)!important}.society-overview>.section-kicker,.society-overview>h2{color:#fff!important}.society-overview .society-grid article{transform:translateY(34px) scale(.985)}.society-overview .society-grid article.visible{transform:none}
     .journey-map .journey-card{transform:translateY(34px) scale(.985)}.journey-map .journey-card.visible{transform:none}
@@ -206,6 +206,7 @@
     <button class="prev" type="button" aria-label="Diapositiva anterior">←</button>
     <span class="slide-count" aria-live="polite">1 / 18</span>
     <button class="next" type="button" aria-label="Diapositiva siguiente">→</button>
+    <button class="fullscreen slide-fullscreen" type="button">Pantalla completa</button>
   </div>
   <div class="progress-track" aria-hidden="true"><span class="progress-bar"></span></div>
   <script>
@@ -219,7 +220,7 @@
     document.addEventListener('keydown',e=>{if(['ArrowRight','PageDown',' '].includes(e.key)){e.preventDefault();goToSlide(currentSlide+1)}if(['ArrowLeft','PageUp'].includes(e.key)){e.preventDefault();goToSlide(currentSlide-1)}if(e.key==='Home')goToSlide(0);if(e.key==='End')goToSlide(slides.length-1)});
     document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{const target=document.querySelector(a.getAttribute('href'));const index=slides.indexOf(target);if(index>=0){e.preventDefault();goToSlide(index);nav.classList.remove('open')}}));
     let touchX=0;document.addEventListener('touchstart',e=>touchX=e.changedTouches[0].screenX,{passive:true});document.addEventListener('touchend',e=>{const delta=e.changedTouches[0].screenX-touchX;if(Math.abs(delta)>70)goToSlide(currentSlide+(delta<0?1:-1))},{passive:true});
-    document.querySelector('.fullscreen').addEventListener('click',async()=>{try{if(!document.fullscreenElement)await document.documentElement.requestFullscreen();else await document.exitFullscreen()}catch(e){}});
+    document.querySelectorAll('.fullscreen').forEach(button=>button.addEventListener('click',async()=>{try{if(!document.fullscreenElement)await document.documentElement.requestFullscreen();else await document.exitFullscreen()}catch(e){}}));
     history.replaceState(null,'',location.pathname+location.search);goToSlide(0,false);
   </script>
 </body>
