@@ -16,9 +16,12 @@ La presentación tiene 17 diapositivas, está optimizada para proyección en pan
 - La barra espaciadora para avanzar.
 - Un gesto horizontal en celulares.
 - El botón Pantalla completa en computadoras.
+- En la diapositiva 5, cada clic revela una nueva tarjeta.
+- En la diapositiva 8, las flechas internas recorren las postas.
 
 Antes del encuentro todavía conviene completar:
 - Probar el QR y la visualización de Slido con varios celulares.
+- Completar las cantidades proyectadas de escuelas y estudiantes.
 - Los videos, reels o imágenes que ocuparán los espacios multimedia reservados.
 
 El relato se organiza por poblaciones y momentos: sociedad en general, postulantes
