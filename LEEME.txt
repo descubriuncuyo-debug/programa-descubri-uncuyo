@@ -10,14 +10,14 @@ No necesitás instalar Node, Vinext ni ningún programa.
 
 Para verla antes de subirla, abrí index.html con doble clic.
 
-La presentación tiene 17 diapositivas, está optimizada para proyección en pantalla 16:9 y se controla con:
+La presentación tiene 18 diapositivas, está optimizada para proyección en pantalla 16:9 y se controla con:
 - Los botones de flecha que aparecen abajo.
 - Las teclas de flecha izquierda y derecha.
 - La barra espaciadora para avanzar.
 - Un gesto horizontal en celulares.
 - El botón Pantalla completa en computadoras.
 - En la diapositiva 5, cada clic revela una nueva tarjeta.
-- En la diapositiva 8, las flechas internas recorren las postas.
+- En la diapositiva 7, las flechas internas recorren las postas.
 
 Antes del encuentro todavía conviene completar:
 - Probar el QR y la visualización de Slido con varios celulares.
