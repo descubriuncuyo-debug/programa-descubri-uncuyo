@@ -189,6 +189,7 @@
     .society-overview>.section-kicker{color:#FF77CD!important;font-size:24px!important}.society-overview .society-grid h3{color:#F0EEFF!important;font-size:33px}.society-overview .society-grid article{justify-content:center}
     .point-stats{display:grid!important;grid-template-columns:1fr 1fr;gap:12px;min-width:430px}.point-stat{min-width:0!important}.point-stat strong{color:#F1603C!important;font-size:43px!important;line-height:1}.point-stat span{display:block;margin-top:7px;color:#212121;font-size:16px!important}.point-stats-caption{grid-column:1/-1;margin:0;padding:10px 18px;border-radius:16px;background:#F0EEFF;color:#212121;text-align:center;font-size:18px;font-weight:900}
   </style>
+  <noscript><style>main > section{display:none!important}main > section:first-child{display:flex!important}</style></noscript>
 </head>
 <body class="first-slide">
   <header class="site-header">
@@ -199,7 +200,7 @@
     <a class="header-action" href="https://www.uncuyo.edu.ar/ingreso/" target="_blank" rel="noopener">Ingreso UNCUYO</a>
   </header>
   <main>
-    <section class="logo-cover section" id="inicio" aria-hidden="false"><img class="cover-composition" src="assets/portada.svg" alt="Descubrí UNCUYO, tu puente a la Universidad. Universidad Nacional de Cuyo, Secretaría Académica, Dirección de Trayectorias Académicas y Coordinación de Ingreso."><button class="fullscreen cover-fullscreen" type="button" aria-label="Pantalla completa" title="Pantalla completa"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3H3v5M16 3h5v5M21 16v5h-5M8 21H3v-5"/></svg><span>Pantalla completa</span></button></section>
+    <section class="logo-cover section active-slide" id="inicio" aria-hidden="false"><img class="cover-composition" src="assets/portada.svg" alt="Descubrí UNCUYO, tu puente a la Universidad. Universidad Nacional de Cuyo, Secretaría Académica, Dirección de Trayectorias Académicas y Coordinación de Ingreso."><button class="fullscreen cover-fullscreen" type="button" aria-label="Pantalla completa" title="Pantalla completa"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3H3v5M16 3h5v5M21 16v5h-5M8 21H3v-5"/></svg><span>Pantalla completa</span></button></section>
     <section class="narrative section policy-slide reveal-slide"><p class="section-kicker">EL INGRESO COMO POLÍTICA DE GESTIÓN</p><h2><span>Ingresar no es un</span><span>momento aislado.</span></h2><div class="story-grid"><article class="story-card reveal-card" style="--story-color:#FFC813"><span class="number">01</span><h3>Requiere decisiones</h3><p>Organización, articulación y recursos para sostener acciones de ingreso en toda la Universidad.</p></article><article class="story-card reveal-card" style="--story-color:#00C1CF"><span class="number">02</span><h3>Es una trayectoria</h3><p>Comienza antes de la inscripción y continúa durante los primeros pasos en la vida universitaria.</p></article><article class="story-card reveal-card" style="--story-color:#9CC813"><span class="number">03</span><h3>Se construye colectivamente</h3><p>Rectorado, Unidades Académicas y equipos de ingreso intervienen en distintos momentos.</p></article></div></section>
     <section class="qr-slide section" id="pregunta" aria-hidden="true"><h2>¿Qué significa hoy acercar la Universidad a quienes todavía no llegaron a ella?</h2><img src="assets/qr-slido.png" alt="Código QR para participar en Slido"></section>
     <section class="cloud-only section" id="nube"><div class="cloud-frame"><iframe title="Nube de palabras en vivo de Slido" sandbox="allow-popups allow-scripts allow-same-origin allow-forms allow-presentation" allowfullscreen src="https://wall.sli.do/event/uBDMbQiqcTDXuN45HLj16A?section=af7d815b-93f0-402a-93bd-fd481532c2cc"></iframe></div></section>
@@ -225,18 +226,144 @@
   </div>
   <div class="progress-track" aria-hidden="true"><span class="progress-bar"></span></div>
   <script>
-    const menu=document.querySelector('.menu-button'),nav=document.querySelector('.nav');menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open))});nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
-    const slides=[...document.querySelectorAll('main>section')],prev=document.querySelector('.prev'),next=document.querySelector('.next'),bar=document.querySelector('.progress-bar');let currentSlide=0;
-    let revealTimers=[];
-    function startAutomaticReveal(slide){revealTimers.forEach(clearTimeout);revealTimers=[];document.querySelectorAll('.reveal-card').forEach(card=>card.classList.remove('visible'));if(!slide?.classList.contains('reveal-slide'))return;slide.querySelectorAll('.reveal-card').forEach((card,index)=>{revealTimers.push(setTimeout(()=>card.classList.add('visible'),450+(index*720)))})}
-    function goToSlide(index,updateHash=true){currentSlide=Math.max(0,Math.min(slides.length-1,index));document.body.classList.toggle('first-slide',currentSlide===0);slides.forEach((slide,i)=>{slide.classList.toggle('active-slide',i===currentSlide);slide.setAttribute('aria-hidden',String(i!==currentSlide));if(i===currentSlide)slide.scrollTop=0});startAutomaticReveal(slides[currentSlide]);bar.style.width=((currentSlide+1)/slides.length*100)+'%';prev.disabled=currentSlide===0;next.disabled=currentSlide===slides.length-1;if(updateHash&&slides[currentSlide].id)history.replaceState(null,'','#'+slides[currentSlide].id)}
-    prev.addEventListener('click',()=>goToSlide(currentSlide-1));next.addEventListener('click',()=>goToSlide(currentSlide+1));
-    const postaCards=[...document.querySelectorAll('.posta-card')];let postaIndex=0;function showPosta(index){postaIndex=(index+postaCards.length)%postaCards.length;postaCards.forEach((card,i)=>card.classList.toggle('active',i===postaIndex))}document.querySelector('.posta-prev')?.addEventListener('click',e=>{e.stopPropagation();showPosta(postaIndex-1)});document.querySelector('.posta-next')?.addEventListener('click',e=>{e.stopPropagation();showPosta(postaIndex+1)});
-    document.addEventListener('keydown',e=>{const editing=e.target.matches('input,textarea,[contenteditable="true"]');if(editing)return;if(['ArrowRight','PageDown',' '].includes(e.key)){e.preventDefault();goToSlide(currentSlide+1)}if(['ArrowLeft','PageUp'].includes(e.key)){e.preventDefault();goToSlide(currentSlide-1)}if(e.key==='Home')goToSlide(0);if(e.key==='End')goToSlide(slides.length-1)});
-    document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{const target=document.querySelector(a.getAttribute('href'));const index=slides.indexOf(target);if(index>=0){e.preventDefault();goToSlide(index);nav.classList.remove('open')}}));
-    let touchX=0;document.addEventListener('touchstart',e=>touchX=e.changedTouches[0].screenX,{passive:true});document.addEventListener('touchend',e=>{const delta=e.changedTouches[0].screenX-touchX;if(Math.abs(delta)>70)goToSlide(currentSlide+(delta<0?1:-1))},{passive:true});
-    document.querySelectorAll('.fullscreen').forEach(button=>button.addEventListener('click',async()=>{try{if(!document.fullscreenElement)await document.documentElement.requestFullscreen();else await document.exitFullscreen()}catch(e){}}));
-    history.replaceState(null,'',location.pathname+location.search);goToSlide(0,false);
+    (() => {
+      const initPresentation = () => {
+        const menu = document.querySelector('.menu-button');
+        const nav = document.querySelector('.nav');
+        const slides = [...document.querySelectorAll('main > section')];
+        const prev = document.querySelector('.prev');
+        const next = document.querySelector('.next');
+        const bar = document.querySelector('.progress-bar');
+
+        if (!slides.length) return;
+
+        let currentSlide = 0;
+        let revealTimers = [];
+
+        const startAutomaticReveal = (slide) => {
+          revealTimers.forEach(clearTimeout);
+          revealTimers = [];
+          document.querySelectorAll('.reveal-card').forEach(card => card.classList.remove('visible'));
+          if (!slide || !slide.classList.contains('reveal-slide')) return;
+          slide.querySelectorAll('.reveal-card').forEach((card, index) => {
+            revealTimers.push(setTimeout(() => card.classList.add('visible'), 450 + (index * 720)));
+          });
+        };
+
+        const goToSlide = (index, updateHash = true) => {
+          currentSlide = Math.max(0, Math.min(slides.length - 1, index));
+          document.body.classList.toggle('first-slide', currentSlide === 0);
+
+          slides.forEach((slide, i) => {
+            const isActive = i === currentSlide;
+            slide.classList.toggle('active-slide', isActive);
+            slide.setAttribute('aria-hidden', String(!isActive));
+            if (isActive) slide.scrollTop = 0;
+          });
+
+          startAutomaticReveal(slides[currentSlide]);
+          if (bar) bar.style.width = `${((currentSlide + 1) / slides.length) * 100}%`;
+          if (prev) prev.disabled = currentSlide === 0;
+          if (next) next.disabled = currentSlide === slides.length - 1;
+
+          if (updateHash && slides[currentSlide].id) {
+            try {
+              history.replaceState(null, '', `#${slides[currentSlide].id}`);
+            } catch (_) {
+              // La presentación sigue funcionando aunque el navegador bloquee History API.
+            }
+          }
+        };
+
+        if (menu && nav) {
+          menu.addEventListener('click', () => {
+            const open = nav.classList.toggle('open');
+            menu.setAttribute('aria-expanded', String(open));
+          });
+          nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => nav.classList.remove('open')));
+        }
+
+        prev?.addEventListener('click', () => goToSlide(currentSlide - 1));
+        next?.addEventListener('click', () => goToSlide(currentSlide + 1));
+
+        const postaCards = [...document.querySelectorAll('.posta-card')];
+        let postaIndex = 0;
+        const showPosta = (index) => {
+          if (!postaCards.length) return;
+          postaIndex = (index + postaCards.length) % postaCards.length;
+          postaCards.forEach((card, i) => card.classList.toggle('active', i === postaIndex));
+        };
+
+        document.querySelector('.posta-prev')?.addEventListener('click', event => {
+          event.stopPropagation();
+          showPosta(postaIndex - 1);
+        });
+        document.querySelector('.posta-next')?.addEventListener('click', event => {
+          event.stopPropagation();
+          showPosta(postaIndex + 1);
+        });
+
+        document.addEventListener('keydown', event => {
+          const target = event.target;
+          const editing = target instanceof Element && target.matches('input, textarea, [contenteditable="true"]');
+          if (editing) return;
+          if (['ArrowRight', 'PageDown', ' '].includes(event.key)) {
+            event.preventDefault();
+            goToSlide(currentSlide + 1);
+          }
+          if (['ArrowLeft', 'PageUp'].includes(event.key)) {
+            event.preventDefault();
+            goToSlide(currentSlide - 1);
+          }
+          if (event.key === 'Home') goToSlide(0);
+          if (event.key === 'End') goToSlide(slides.length - 1);
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', event => {
+          const selector = a.getAttribute('href');
+          if (!selector || selector === '#') return;
+          const target = document.querySelector(selector);
+          const index = slides.indexOf(target);
+          if (index >= 0) {
+            event.preventDefault();
+            goToSlide(index);
+            nav?.classList.remove('open');
+          }
+        }));
+
+        let touchX = 0;
+        document.addEventListener('touchstart', event => {
+          touchX = event.changedTouches[0].screenX;
+        }, { passive: true });
+        document.addEventListener('touchend', event => {
+          const delta = event.changedTouches[0].screenX - touchX;
+          if (Math.abs(delta) > 70) goToSlide(currentSlide + (delta < 0 ? 1 : -1));
+        }, { passive: true });
+
+        document.querySelectorAll('.fullscreen').forEach(button => button.addEventListener('click', async () => {
+          try {
+            if (!document.fullscreenElement) await document.documentElement.requestFullscreen();
+            else await document.exitFullscreen();
+          } catch (_) {
+            // Algunos navegadores bloquean pantalla completa; la navegación sigue disponible.
+          }
+        }));
+
+        // Se ejecuta primero: así la portada aparece aun si el navegador bloquea otras APIs.
+        goToSlide(0, false);
+        try {
+          history.replaceState(null, '', location.pathname + location.search);
+        } catch (_) {
+          // No afecta la presentación.
+        }
+      };
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initPresentation, { once: true });
+      } else {
+        initPresentation();
+      }
+    })();
   </script>
 </body>
 </html>
