@@ -1,0 +1,17 @@
+PROGRAMA DESCUBRÍ UNCUYO — ARCHIVOS PARA GITHUB PAGES
+
+1. Descomprimir este ZIP en la computadora.
+2. Entrar al repositorio programa-descubri-uncuyo en GitHub.
+3. En la raíz del repositorio, eliminar o reemplazar los archivos anteriores.
+4. Subir TODO el contenido descomprimido:
+   - index.html
+   - carpeta assets completa
+   - .nojekyll
+5. Confirmar con Commit changes.
+6. Esperar a que el deployment de GitHub Pages termine con tilde verde.
+7. Abrir el sitio y actualizar con Ctrl + F5.
+
+IMPORTANTE:
+- No subir el ZIP sin descomprimir.
+- No meter los archivos dentro de una carpeta adicional.
+- La carpeta assets debe quedar al mismo nivel que index.html.
