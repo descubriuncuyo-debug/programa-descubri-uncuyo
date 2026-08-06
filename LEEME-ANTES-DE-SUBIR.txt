@@ -1,0 +1,12 @@
+SUBIDA COMPLETA A GITHUB PAGES
+
+Esta carpeta reemplaza todas las versiones anteriores.
+
+1. Abrí el repositorio programa-descubri-uncuyo en GitHub.
+2. Reemplazá el index.html anterior por el index.html de esta carpeta.
+3. Reemplazá la carpeta assets anterior por la carpeta assets de esta entrega.
+4. Subí también el archivo .nojekyll.
+5. Confirmá con Commit changes.
+6. Esperá uno o dos minutos y recargá la web con Ctrl + F5.
+
+El index.html correcto tiene 19 diapositivas e incluye Derechos Humanos.
