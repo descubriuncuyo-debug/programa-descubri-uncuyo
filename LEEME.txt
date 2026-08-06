@@ -10,7 +10,7 @@ No necesitás instalar Node, Vinext ni ningún programa.
 
 Para verla antes de subirla, abrí index.html con doble clic.
 
-La presentación tiene 18 diapositivas, está optimizada para proyección en pantalla 16:9 y se controla con:
+La presentación tiene 17 diapositivas, está optimizada para proyección en pantalla 16:9 y se controla con:
 - Los botones de flecha que aparecen abajo.
 - Las teclas de flecha izquierda y derecha.
 - La barra espaciadora para avanzar.
